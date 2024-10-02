@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Alerts for Selenium Testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .alert-btn {
+            background-color: #007bff;
+            color: white;
+        }
+        .confirm-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .prompt-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Alerts for Selenium Testing</h1>
+
+    <button id="alertBtn" class="alert-btn" onclick="showAlert()">Show Alert</button>
+    <button id="confirmBtn" class="confirm-btn" onclick="showConfirm()">Show Confirm</button>
+    <button id="promptBtn" class="prompt-btn" onclick="showPrompt()">Show Prompt</button>
+
+    <script>
+        function showAlert() {
+            alert("This is a simple alert!");
+        }
+
+        function showConfirm() {
+            confirm("Are you sure you want to continue?");
+        }
+
+        function showPrompt() {
+            prompt("Please enter your name:");
+        }
+    </script>
+
+</body>
+</html>
+
