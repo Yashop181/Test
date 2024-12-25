@@ -32,12 +32,12 @@
 </head>
 <body>
 
-    <h1>JavaScript Alerts for Selenium Testing</h1>
 
     <button id="alertBtn" class="alert-btn" onclick="showAlert()">Show Alert</button>
     <button id="confirmBtn" class="confirm-btn" onclick="showConfirm()">Show Confirm</button>
     <button id="promptBtn" class="prompt-btn" onclick="showPrompt()">Show Prompt</button>
 
+    <h1 id="promptValue">JavaScript Alerts for Selenium Testing</h1>
     <script>
         function showAlert() {
             alert("This is a simple alert!");
@@ -48,10 +48,14 @@
         }
 
         function showPrompt() {
-            prompt("Please enter your name:");
+            const userInput = prompt("Please enter your name:");
+            if (userInput !== null) { // Check if the user entered a value or pressed Cancel
+                document.getElementById("promptValue").textContent = `Hello, ${userInput}!`;
+            } else {
+                document.getElementById("promptValue").textContent = "You canceled the prompt.";
+            }
         }
     </script>
 
 </body>
 </html>
-
